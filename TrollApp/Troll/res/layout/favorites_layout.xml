@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:padding="10dip"
+     android:background="@drawable/opaquecoffeecup">
+     
+     <TextView
+         android:id="@+id/favorites_title"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:text="Your Favorites:" />
+ 
+          
+   <!--   <Button
+         android:id="@+id/backProfBtn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity=""
+         android:layout_marginBottom="5dp"
+         android:text="Back"/>
+      -->
+     <ListView
+         android:id="@+id/favorite_list"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent">
+     </ListView>
+</LinearLayout>
+
+ 
