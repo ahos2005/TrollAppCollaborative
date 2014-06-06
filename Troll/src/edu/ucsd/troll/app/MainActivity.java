@@ -3,6 +3,8 @@ package edu.ucsd.troll.app;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.provider.Settings;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
@@ -11,11 +13,14 @@ import org.json.JSONObject;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -26,6 +31,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
@@ -79,6 +85,8 @@ public class MainActivity extends Activity {
 
     // Alert Dialog Manager
     AlertDialogManager alert = new AlertDialogManager();
+    
+    
 
     // Session Manager Class
     SessionManager session;
@@ -97,6 +105,22 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+//        if (haveNetworkConnection()== false) { 
+//        	
+//        	MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+//        	
+//        	}
+        
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            alert.showAlertDialog(MainActivity.this, "Internet Connection Error",
+                "Please connect to working Internet connection", false);
+            // stop executing code by return
+            return;
+        }
+        
         locationsStorage = new LocationAPIManager(getApplicationContext());
 
         factTextView = (TextView) findViewById(R.id.factText);
@@ -107,7 +131,7 @@ public class MainActivity extends Activity {
         new GetRandomFact().execute();
 
         //if(! locationsStorage.locationsLoaded())
-        	new GetLocations().execute();
+        new GetLocations().execute();
 
 
         //factTextView.setText(factString);
@@ -166,6 +190,25 @@ public class MainActivity extends Activity {
             }
         });
     }
+    
+    
+    private boolean haveNetworkConnection() {
+        boolean haveConnectedWifi = false;
+        boolean haveConnectedMobile = false;
+
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+        for (NetworkInfo ni : netInfo) {
+            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+                if (ni.isConnected())
+                    haveConnectedWifi = true;
+            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+                if (ni.isConnected())
+                    haveConnectedMobile = true;
+        }
+        return haveConnectedWifi || haveConnectedMobile;
+    }
+    
 
     private class GetRandomFact extends AsyncTask<Void, Void, String> {
 
