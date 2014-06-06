@@ -104,7 +104,7 @@ public class LoginManager {
      * */
     public void createUserFavorites(String favorites){
         // Storing favorites as string for later manipulation
-        editor.putString(KEY_ID, favorites);
+        editor.putString(KEY_FAVORITES, favorites);
         // commit changes
         editor.commit();
     }
