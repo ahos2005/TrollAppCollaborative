@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
     private static final String TAG_SORT = "sort_by";
     private static final String TAG_SORT_ORDER = "order_by";
 
-//comment
+
     
     JSONArray locations = null;
     // Hashmap for ListView
@@ -105,21 +105,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-//        if (haveNetworkConnection()== false) { 
-//        	
-//        	MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
-//        	
-//        	}
-        
-        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
-        // Check if Internet present
-        if (!cd.isConnectingToInternet()) {
-            // Internet Connection is not present
-            alert.showAlertDialog(MainActivity.this, "Internet Connection Error",
-                "Please connect to working Internet connection", false);
-            // stop executing code by return
-            return;
-        }
+        if (haveNetworkConnection()== false) { 
+        	
+        	MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+        	
+        	}
         
         locationsStorage = new LocationAPIManager(getApplicationContext());
 

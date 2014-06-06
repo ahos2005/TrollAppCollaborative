@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
     private static final String TAG_SORT = "sort_by";
     private static final String TAG_SORT_ORDER = "order_by";
 
-//comment
+
     
     JSONArray locations = null;
     // Hashmap for ListView
@@ -85,8 +85,6 @@ public class MainActivity extends Activity {
 
     // Alert Dialog Manager
     AlertDialogManager alert = new AlertDialogManager();
-    
-    
 
     // Session Manager Class
     SessionManager session;
@@ -105,21 +103,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-//        if (haveNetworkConnection()== false) { 
-//        	
-//        	MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
-//        	
-//        	}
-        
-        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
-        // Check if Internet present
-        if (!cd.isConnectingToInternet()) {
-            // Internet Connection is not present
-            alert.showAlertDialog(MainActivity.this, "Internet Connection Error",
-                "Please connect to working Internet connection", false);
-            // stop executing code by return
-            return;
-        }
+        if (isOnline()==false) {      MainActivity.this.startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS)); }
         
         locationsStorage = new LocationAPIManager(getApplicationContext());
 
@@ -192,21 +176,15 @@ public class MainActivity extends Activity {
     }
     
     
-    private boolean haveNetworkConnection() {
-        boolean haveConnectedWifi = false;
-        boolean haveConnectedMobile = false;
+    public boolean isOnline() {
+        ConnectivityManager conMgr = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = conMgr.getActiveNetworkInfo();
 
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo[] netInfo = cm.getAllNetworkInfo();
-        for (NetworkInfo ni : netInfo) {
-            if (ni.getTypeName().equalsIgnoreCase("WIFI"))
-                if (ni.isConnected())
-                    haveConnectedWifi = true;
-            if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
-                if (ni.isConnected())
-                    haveConnectedMobile = true;
+        if(netInfo == null || !netInfo.isConnected() || !netInfo.isAvailable()){
+            Toast.makeText(getApplicationContext(), "No Internet connection!", Toast.LENGTH_LONG).show();
+            return false;
         }
-        return haveConnectedWifi || haveConnectedMobile;
+    return true; 
     }
     
 
