@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/ll_root"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    
+       <TextView
+        android:id="@+id/lblActivityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Filter Menu"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+       
+       <View 
+        android:id="@+id/hr1"  
+      	android:layout_below="@+id/lblActivityTitle"
+   		android:layout_width="fill_parent"
+   		android:layout_height="2px"       
+   		android:background="#ffffff"/>
+       
+     
+      <TextView
+        android:id="@+id/lblByPrice"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/hr1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Filter by Price"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+      
+   <LinearLayout android:id="@+id/ll_row1"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   
+
+        <Button
+            android:id="@+id/priceBtnAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Low to High"/>
+
+        <Button
+            android:id="@+id/priceBtnDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="High to Low"/>
+
+    </LinearLayout>
+    
+   <!-- By Category -->
+         <TextView
+        android:id="@+id/lblCategoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Filter by Category"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+      
+   <LinearLayout android:id="@+id/ll_row2"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   
+
+        <Button
+            android:id="@+id/categoryBtnAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A to Z"/>
+
+        <Button
+            android:id="@+id/categoryBtnDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Z to A"/>
+
+    </LinearLayout>
+    
+   
+      <!-- By Title -->
+         <TextView
+        android:id="@+id/lblTitleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Filter by Title"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+      
+   <LinearLayout android:id="@+id/ll_row3"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   
+
+        <Button
+            android:id="@+id/titleBtnAsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A to Z"/>
+
+        <Button
+            android:id="@+id/titleBtnDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Z to A"/>
+
+    </LinearLayout>
+    
+   
+         <!-- By Rating -->
+         <TextView
+        android:id="@+id/lblRatingTitle"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/hr1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Filter by Rating"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+      
+      
+   <LinearLayout android:id="@+id/ll_row4"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   
+
+        <Button
+            android:id="@+id/ratingBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="A to Z"/>
+
+
+    </LinearLayout>
+    
+   
+    
+      <LinearLayout android:id="@+id/ll_row5"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   
+
+        <Button
+            android:id="@+id/clearBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear Filters"/>
+
+
+    </LinearLayout>
+    
+   
+
+</LinearLayout>
