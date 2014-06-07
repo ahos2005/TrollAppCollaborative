@@ -70,7 +70,7 @@ public class LoginActivity extends Activity {
     private static final String TAG_FIRSTNAME = "first_name";
     private static final String TAG_LASTNAME = "last_name";
     private static final String TAG_FAVORITES = "favorites";
-    private static final String TAG_USERTOKEN = "presist_code";
+    private static final String TAG_USERTOKEN = "user_token";
 
 
     // menu JSONArray
@@ -237,8 +237,8 @@ public class LoginActivity extends Activity {
                     String responseFavorite = resultObj.getString(TAG_FAVORITES);
                     Log.d("last_name: ", "=> " + responseFavorite);
 
-                    String responseUserToken = resultObj.getString(TAG_USERTOKEN);
-                    Log.d("last_name: ", "=> " + responseUserToken);
+                    String responseUserToken = resultObj.getString("presist_code");
+                    Log.d("Presist_Code ", "=> " + responseUserToken);
 
 
 
@@ -283,6 +283,7 @@ public class LoginActivity extends Activity {
                 // Creating user login session
                 // For testing i am string name, email as follow
                 // Use user real data
+
                 login.createLoginSession(
                         user.get(TAG_ID),
                         user.get(TAG_USERNAME),
@@ -291,9 +292,8 @@ public class LoginActivity extends Activity {
                         user.get(TAG_LASTNAME),
                         user.get(TAG_USERTOKEN)
                 );
-
+                
                 login.createUserFavorites(user.get(TAG_FAVORITES));
-
                 // Starting MainActivity
                 Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
                 startActivity(i);
