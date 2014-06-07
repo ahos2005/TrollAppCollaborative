@@ -53,6 +53,7 @@ public class MainActivity extends Activity {
     private static final String TAG_SORT = "sort_by";
     private static final String TAG_SORT_ORDER = "order_by";
 
+    //just added a comment
 
     
     JSONArray locations = null;

@@ -52,7 +52,8 @@
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:text="Rating: "
-        android:textColor="#acacac" />
+        android:textColor="#141414"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/total_votes"

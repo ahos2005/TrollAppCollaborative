@@ -60,7 +60,7 @@ import edu.ucsd.troll.app.R;
 /**
 * Created on 5/30/2014.
 */
-public class FavoritesActivity extends Activity {
+public class FavoritesActivity extends ListActivity  {
 
     //init the progress bar
     private ProgressDialog pDialog;
@@ -95,7 +95,7 @@ public class FavoritesActivity extends Activity {
     	super.onCreate(savedInstanceState);
     	login = new LoginManager(getApplicationContext());
         setContentView(R.layout.favorites_layout);
-      
+        favoriteList = new ArrayList<HashMap<String, String>>();
         new GetFavorites().execute();
        
 //        final Button backButton = (Button) findViewById(R.id.backProfBtn);
@@ -147,7 +147,7 @@ public class FavoritesActivity extends Activity {
 
             if (favorites != null) {
                 try {
-//                    JSONObject jsonObj = new JSONObject(favorites);
+                    //JSONObject jsonObj = new JSONObject(favorites);
  
                 	
 //                    Log.d("Response: ", "=> " + jsonObj);
@@ -163,12 +163,12 @@ public class FavoritesActivity extends Activity {
                         Log.d("ID: ", "=> " + id);
                         String title = c.getString(TAG_TITLE);
                         Log.d("TITLE: ", "=> " + title);
-                        String email = c.getString(TAG_DESCRIPTION);
-                        Log.d("DESCRIPTION: ", "=> " + email);
-                        String category = c.getString(TAG_CATEGORY);
-                        Log.d("CATEGORY: ", "=> " + category);
-                        String rating = c.getString(TAG_RATING);
-                        Log.d("RATING: ", "=> " + rating);
+                        //String email = c.getString(TAG_DESCRIPTION);
+                        //Log.d("DESCRIPTION: ", "=> " + email);
+                        //String category = c.getString(TAG_CATEGORY);
+                       // Log.d("CATEGORY: ", "=> " + category);
+                        //String rating = c.getString(TAG_RATING);
+                       // Log.d("RATING: ", "=> " + rating);
 
                         // Phone node is JSON Object
                         //JSONArray sizes = c.getJSONArray(TAG_SIZES);
@@ -183,10 +183,10 @@ public class FavoritesActivity extends Activity {
                         HashMap<String, String> singleFavorite = new HashMap<String, String>();
 
                         // adding each child node to HashMap key => value
-                        //contact.put(TAG_ID, id);
+                        //singleFavorite.put(TAG_ID, id);
                         singleFavorite.put(TAG_TITLE, title);
-                        singleFavorite.put(TAG_DESCRIPTION, category);
-                        singleFavorite.put(TAG_SIZE, rating);
+                       // singleFavorite.put(TAG_DESCRIPTION, category);
+                       // singleFavorite.put(TAG_SIZE, rating);
 
                         // adding contact to contact list
                         favoriteList.add(singleFavorite);
@@ -207,14 +207,10 @@ public class FavoritesActivity extends Activity {
             /**
 * Updating parsed JSON data into ListView
 * */
-// ListAdapter adapter = new SimpleAdapter(
-// MainActivity.this, favoriteList,
-// R.layout.profile_layout, new String[] {TAG_TITLE, TAG_DESCRIPTION,
-// TAG_SIZE}, new int[] { R.id.title,
-// R.id.rating, R.id.category });
-//
-// setListAdapter(adapter);
+ ListAdapter adapter = new SimpleAdapter(
+		 FavoritesActivity.this, favoriteList,
+		 R.layout.favorites_list, new String[] {TAG_TITLE}, new int[] { R.id.item_title});
+ 		setListAdapter(adapter);
         }
-
     }
 }
