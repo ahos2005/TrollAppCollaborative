@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
+<<<<<<< HEAD
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402094223470_0" label="Window Working Set" name="Aggregate for window 1402094223470"/>
+=======
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1402090554019_0" label="Window Working Set" name="Aggregate for window 1402090554019"/>
+>>>>>>> origin/Joel
 </workingSetManager>

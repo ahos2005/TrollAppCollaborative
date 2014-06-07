@@ -1,8 +1,34 @@
+<<<<<<< HEAD
+!SESSION 2014-06-06 15:36:50.211 -----------------------------------------------
+=======
 !SESSION 2014-06-06 14:35:39.104 -----------------------------------------------
+>>>>>>> origin/Joel
 eclipse.buildId=v22.6.2-1085508
 java.version=1.6.0_65
 java.vendor=Apple Inc.
 BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+<<<<<<< HEAD
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/ahmedMac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/ahmedMac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-06-06 15:37:00.561
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2014-06-06 15:39:56.986 -----------------------------------------------
+eclipse.buildId=v22.6.2-1085508
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -keyring /Users/ahmedMac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -product com.android.ide.eclipse.adt.package.product -data /Users/ahmedMac/TrollAppCollaborative2.0 -product com.android.ide.eclipse.adt.package.product -keyring /Users/ahmedMac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-06-06 15:40:00.418
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.resources 4 4 2014-06-06 15:40:54.060
+!MESSAGE Exception occurred while saving project preferences: /android-support-v7-appcompat/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/appcompat_v7/.settings'.
+=======
 Framework arguments:  -product com.android.ide.eclipse.adt.package.product -keyring /Users/shalomabitan/.eclipse_keyring -showlocation
 Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.ide.eclipse.adt.package.product -keyring /Users/shalomabitan/.eclipse_keyring -showlocation
 
@@ -13,6 +39,7 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product com.android.
 !MESSAGE Exception occurred while saving project preferences: /android-support-v7-appcompat/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/android-support-v7-appcompat/.settings'.
+>>>>>>> origin/Joel
 	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
 	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
 	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:571)
@@ -32,6 +59,15 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:40:54.061
+!MESSAGE A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/appcompat_v7/.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-06-06 15:40:54.062
+!MESSAGE Exception occurred while saving project preferences: /android-support-v7-appcompat/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/appcompat_v7/.settings'.
+=======
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 14:38:25.815
 !MESSAGE A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/android-support-v7-appcompat/.settings'.
 
@@ -39,6 +75,7 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 !MESSAGE Exception occurred while saving project preferences: /android-support-v7-appcompat/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/android-support-v7-appcompat/.settings'.
+>>>>>>> origin/Joel
 	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
 	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
 	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:571)
@@ -58,6 +95,15 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:40:54.062
+!MESSAGE A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/appcompat_v7/.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-06-06 15:40:54.063
+!MESSAGE Exception occurred while saving project preferences: /android-support-v7-appcompat/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/appcompat_v7/.settings'.
+=======
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 14:38:25.816
 !MESSAGE A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/android-support-v7-appcompat/.settings'.
 
@@ -65,6 +111,7 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 !MESSAGE Exception occurred while saving project preferences: /android-support-v7-appcompat/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/android-support-v7-appcompat/.settings'.
+>>>>>>> origin/Joel
 	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
 	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
 	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:571)
@@ -84,6 +131,15 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:40:54.063
+!MESSAGE A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/appcompat_v7/.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-06-06 15:40:54.655
+!MESSAGE Exception occurred while saving project preferences: /Troll/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/Troll/.settings'.
+=======
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 14:38:25.817
 !MESSAGE A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/android-support-v7-appcompat/.settings'.
 
@@ -91,6 +147,7 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 !MESSAGE Exception occurred while saving project preferences: /Troll/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/Troll/.settings'.
+>>>>>>> origin/Joel
 	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
 	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
 	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:571)
@@ -110,6 +167,15 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:40:54.655
+!MESSAGE A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/Troll/.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-06-06 15:40:54.656
+!MESSAGE Exception occurred while saving project preferences: /Troll/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/Troll/.settings'.
+=======
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 14:38:26.578
 !MESSAGE A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/Troll/.settings'.
 
@@ -117,6 +183,7 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 !MESSAGE Exception occurred while saving project preferences: /Troll/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/Troll/.settings'.
+>>>>>>> origin/Joel
 	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
 	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
 	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:571)
@@ -136,6 +203,15 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:40:54.656
+!MESSAGE A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/Troll/.settings'.
+
+!ENTRY org.eclipse.core.resources 4 4 2014-06-06 15:40:54.675
+!MESSAGE Exception occurred while saving project preferences: /Troll/.settings/org.eclipse.jdt.core.prefs.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/Troll/.settings'.
+=======
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 14:38:26.578
 !MESSAGE A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/Troll/.settings'.
 
@@ -143,6 +219,7 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 !MESSAGE Exception occurred while saving project preferences: /Troll/.settings/org.eclipse.jdt.core.prefs.
 !STACK 1
 org.eclipse.core.internal.resources.ResourceException: A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/Troll/.settings'.
+>>>>>>> origin/Joel
 	at org.eclipse.core.internal.resources.Folder.assertCreateRequirements(Folder.java:47)
 	at org.eclipse.core.internal.resources.Folder.create(Folder.java:95)
 	at org.eclipse.core.internal.resources.ProjectPreferences$1.run(ProjectPreferences.java:571)
@@ -162,10 +239,17 @@ org.eclipse.core.internal.resources.ResourceException: A resource already exists
 	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2345)
 	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
+!SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:40:54.676
+!MESSAGE A resource already exists on disk '/Users/ahmedMac/TrollAppCollaborative2.0/TrollApp/Troll/.settings'.
+
+!ENTRY org.eclipse.equinox.preferences 4 2 2014-06-06 15:40:55.901
+=======
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 14:38:26.579
 !MESSAGE A resource already exists on disk '/Users/shalomabitan/UCSD/finalTroll/Troll/.settings'.
 
 !ENTRY org.eclipse.equinox.preferences 4 2 2014-06-06 14:38:27.304
+>>>>>>> origin/Joel
 !MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.equinox.preferences".
 !STACK 0
 java.lang.IllegalArgumentException: Attempted to beginRule: P/Troll, does not match outer scope rule: P/android-support-v7-appcompat
@@ -204,6 +288,8 @@ java.lang.IllegalArgumentException: Attempted to beginRule: P/Troll, does not ma
 	at org.eclipse.core.internal.refresh.RefreshJob.runInWorkspace(RefreshJob.java:167)
 	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+<<<<<<< HEAD
+=======
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2014-06-06 14:50:07.722
 !MESSAGE Failed to render set of icons for AnalogClock, AutoCompleteTextView, Button, SmallButton, CheckBox, CheckedTextView, DigitalClock, PlainText, Password, PasswordNumeric, PersonName, Phone, PostalAddress, MultilineText, Date, Time, Email, Number, NumberSigned, NumberDecimal, LargeText, MediumText, SmallText, MultiAutoCompleteTextView, ProgressBarNormal, ProgressBarHorizontal, ProgressBarLarge, ProgressBarSmall, QuickContactBadge, RadioButton, RatingBar, SeekBar, ListView, ExpandableListView, Spinner, TextView, ToggleButton, ZoomButton, ZoomControls, CalendarView, RadioGroup
@@ -853,6 +939,7 @@ org.eclipse.core.internal.resources.ResourceException: Resource already exists o
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 15:37:51.110
 !MESSAGE Resource already exists on disk: '/Troll/bin/classes/.DS_Store'.
+<<<<<<< HEAD
 !SESSION 2014-06-06 16:32:08.105 -----------------------------------------------
 eclipse.buildId=v22.6.2-1085508
 java.version=1.6.0_65
@@ -897,3 +984,6 @@ org.eclipse.core.internal.resources.ResourceException: Resource already exists o
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
 !SUBENTRY 1 org.eclipse.core.resources 4 272 2014-06-06 16:32:30.404
 !MESSAGE Resource already exists on disk: '/google-play-services_lib/bin/classes/.gitignore'.
+=======
+>>>>>>> origin/Joel
+>>>>>>> master

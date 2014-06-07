@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.126+/Users/shalomabitan/UCSD/finalTroll/.metadata/.plugins/org.eclipse.jdt.core
 1377251446.index
 2082019495.index
@@ -5,3 +6,13 @@ INDEX VERSION 1.126+/Users/shalomabitan/UCSD/finalTroll/.metadata/.plugins/org.e
 1415693123.index
 3239317409.index
 2237305497.index
+=======
+INDEX VERSION 1.126+/Users/ahmedMac/TrollAppCollaborative2.0/.metadata/.plugins/org.eclipse.jdt.core
+780284310.index
+2237305497.index
+1415693123.index
+1377251446.index
+2893572091.index
+539621931.index
+3722337834.index
+>>>>>>> master
