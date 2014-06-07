@@ -105,6 +105,11 @@ public class MapsActivity extends FragmentActivity implements
     private static final String TAG_FAVORITES = "favorites";
     private static final String TAG_USERTOKEN = "presist_code";
     
+    private static final String TAG_MENUID = "menus_id";
+
+    private static final String TAG_SORT = "sort_by";
+    private static final String TAG_SORT_ORDER = "order_by";
+    
     //for saving data through instances
     static final String CURRENT_ZOOM = "currentZoom";
     static final String CURRENT_LAT = "currentLat";
@@ -122,6 +127,7 @@ public class MapsActivity extends FragmentActivity implements
 	private Button mNearestLocationButton;
 	private String locationAPIResult;
 	private String locationString;
+	private String locationStringId;
 	private int    location_pic;
 	private float currentMapZoom;
 	private float currentMapTilt;
@@ -169,17 +175,24 @@ public class MapsActivity extends FragmentActivity implements
         
         //add the api key for the call
         params.add(new BasicNameValuePair(TAG_APIKEYNAME, TAG_APIKEYVALUE));
+        
         locationsStorage = new LocationAPIManager(getApplicationContext());
         locationAPIResult = locationsStorage.getLocations();
+        
         locationList = new ArrayList<HashMap<String, String>>();
+        
         setUpLocations(locationAPIResult);
         
         Log.d("setUpMapIfNeeded", "activated");
+        
         setUpMapIfNeeded();
+        
         Log.d("setUpMapIfNeeded", "passed");
         
         Log.d("setOnMarkerClickListener", "activated");
+        
         map.setOnMarkerClickListener(this);
+        
         Log.d("setOnMarkerClickListener", "passed");
         
 		/* ADDED IN THIS REWRITE */
@@ -191,6 +204,7 @@ public class MapsActivity extends FragmentActivity implements
 			 public void onClick(View v) {
 				mNearestLocationButton.setVisibility(View.GONE);
 		    	Toast.makeText(getApplicationContext(), "You've just been trolled", Toast.LENGTH_SHORT).show();
+		    	
 				setUpLocations(locationAPIResult);
 			 }
 			 });
@@ -292,11 +306,6 @@ public class MapsActivity extends FragmentActivity implements
                 String title = c.getString(TAG_TITLE);
                 Log.d("title: ", "=> " + title);
 
-//                // Phone node is JSON Object
-//                JSONObject phone = c.getJSONObject(TAG_PHONE);
-//                String mobile = phone.getString(TAG_PHONE_MOBILE);
-//                String home = phone.getString(TAG_PHONE_HOME);
-//                String office = phone.getString(TAG_PHONE_OFFICE);
 
                 // tmp hashmap for single contact
                 HashMap<String, String> locationHash = new HashMap<String, String>();
@@ -331,9 +340,13 @@ public class MapsActivity extends FragmentActivity implements
 	@Override
    	public boolean onMarkerClick(Marker marker){
    		
+   		
    		Log.d("onMarkerClick", "activated");
 		selectedMarker = marker;
 		locationString = marker.getTitle();
+		locationStringId = marker.getSnippet();
+		
+		Log.d("the marker ID", marker.getSnippet());
 		location_pic = R.drawable.fairbanks_center1;
 	
    		/* CREATING DIALOGUE BOX TO APPEAR ON CLICK OF BUTTON */
@@ -367,6 +380,9 @@ public class MapsActivity extends FragmentActivity implements
    			@Override
    			public void onClick(View v) {
                 Intent act8 = new Intent(v.getContext(), LocationMenuActivity.class);
+                act8.putExtra(TAG_MENUID, locationStringId);
+                act8.putExtra(TAG_SORT,"simple");
+                act8.putExtra(TAG_SORT_ORDER,"asc");
                 startActivity(act8);
   				dialog.dismiss();
    			}
@@ -437,6 +453,7 @@ public class MapsActivity extends FragmentActivity implements
 	              .position(new LatLng(Double.parseDouble(hashMap.get(TAG_LAT)) ,        
 	                  Double.parseDouble(hashMap.get(TAG_LNG))))
 	              .title(hashMap.get(TAG_TITLE))
+	              .snippet(hashMap.get(TAG_ID))
 	              .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_coffee_icon)));
 	      }
 	    }
