@@ -98,6 +98,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
+        ConnectionDetector cd = new ConnectionDetector(getApplicationContext());
+        // Check if Internet present
+        if (!cd.isConnectingToInternet()) {
+            // Internet Connection is not present
+            alert.showAlertDialog(MainActivity.this, "Internet Connection Error",
+                "Please connect to working Internet connection", false);
+            // stop executing code by return
+            return;
+        }
+        
         locationsStorage = new LocationAPIManager(getApplicationContext());
 
         factTextView = (TextView) findViewById(R.id.factText);
